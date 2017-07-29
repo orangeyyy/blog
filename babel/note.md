@@ -44,6 +44,7 @@ require('./index.js');
 > babel-regiser比较适合运用于构建脚本或其他本地运行脚本，但是对于生产环境，最好还是先编译再使用。
 
 > 上例中不要将babel-register直接放到index.js文件中，而是应该新增一个register文件，然后在register文件中引用index.js,这是由于在进行文件编译之前必须要先注册babel，如果都放在同一个文件中，node会在babel编译之前就直接执行index文件。
+
 ### babel-core
 babel-core提供一种通过编程方式使用babel的方式。
 引入babel-core：
@@ -56,6 +57,7 @@ babel.transform("code();", options);
 // => { code, map, ast }
 ```
 对于文件夹，babel-core提供同步或者异步两种形式：
+
 ```javascript
 babel.transformFileSync("filename.js", options);
 // => { code, map, ast }
