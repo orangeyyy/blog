@@ -10,3 +10,6 @@
 * [工具库](./tools/README.md)
   * [lru-cache](./tools/lruCache.md)
   * [commander](./tools/commander.md)
+  * [hilo](./tools/hilo.md)
+  * [anyproxy](./tools/anyproxy.md)
+  * [clipboard](./tools/clipboard.md)

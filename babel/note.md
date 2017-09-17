@@ -156,10 +156,13 @@ var Obj = function () {
 ```
 
 > babel-runtime 要用--save安装而不是--save-dev。
+
 ### babel-polyfill
 babel会编译几乎所有新的EcmaScript语法，对于新的API接口则不会，例如，Array.from、Object.asign、String.startsWith等等。如果想要在代码中使用新的API就要使用到babel-polyfill了。使用babel-polyfill的方法是安装babel-polyfill并在代码的最上层引入babel-polyfill。
+
 ### babel-eslint
 eslint主要用于代码语法和风格的检查，对于这类工具我们需要先对代码进行前置转码在进行检查，这样就需要用到babel-eslint。babel-eslint的主要是用是在.eslintrc中的parser中配置eslint-babel。
+
 ```json
 {
   "parser": "babel-eslint",
@@ -171,9 +174,9 @@ eslint主要用于代码语法和风格的检查，对于这类工具我们需�
 }
 ```
 对于以下代码，如果运行eslint src/eslint.js,
+
 ```javascript
 const testStr = "hello world";
-
 const func = (str) => str + '!';
 ```
 会得到如下结果，很明显eslint不认识const，
@@ -183,6 +186,7 @@ const func = (str) => str + '!';
 ![](./img/error3.png)
 
 > babel-eslint主要是针对一些eslint还不支持的类型及实验性的特征，对于这些eslint还不支持的特性，babel-eslint会将他们转换成eslint认识的语法，否则推荐是用eslint默认的parser。
+
 ### .babelrc
 babel本身是不会做任何事情的，需要通过preset和plugin告诉babel该如何编译代码，而配置preset和plugin最好的方式就是通过.babelrc。一般.babelrc的配置如下所示：
 ```json
