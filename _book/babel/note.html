@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>学习笔记 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>学习笔记 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -56,6 +56,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="babel-plugin.html" />
     
     
     <link rel="prev" href="./" />
@@ -127,6 +129,206 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.2" data-path="babel-plugin.html">
+            
+                <a href="babel-plugin.html">
+            
+                    
+                    Babel Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="ast.html">
+            
+                <a href="ast.html">
+            
+                    
+                    AST
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../tools/">
+            
+                <a href="../tools/">
+            
+                    
+                    工具库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../tools/lruCache.html">
+            
+                <a href="../tools/lruCache.html">
+            
+                    
+                    lru-cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../tools/commander.html">
+            
+                <a href="../tools/commander.html">
+            
+                    
+                    commander
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../tools/hilo.html">
+            
+                <a href="../tools/hilo.html">
+            
+                    
+                    hilo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../tools/anyproxy.html">
+            
+                <a href="../tools/anyproxy.html">
+            
+                    
+                    anyproxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../tools/clipboard.html">
+            
+                <a href="../tools/clipboard.html">
+            
+                    
+                    clipboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../tech/">
+            
+                <a href="../tech/">
+            
+                    
+                    技术文章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../tech/ss.html">
+            
+                <a href="../tech/ss.html">
+            
+                    
+                    SS & SSR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../tech/pac.html">
+            
+                <a href="../tech/pac.html">
+            
+                    
+                    PAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../other/scienceSurface.html">
+            
+                <a href="../other/scienceSurface.html">
+            
+                    
+                    科学上网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../other/gist.html">
+            
+                <a href="../other/gist.html">
+            
+                    
+                    Gist
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -177,18 +379,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="babel-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;">Babel &#x5B66;&#x4E60;&#x7B14;&#x8BB0;</h1><h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2><p>Babel&#x662F;&#x4E00;&#x4E2A;js&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;babel&#x7684;&#x4F5C;&#x7528;&#x7406;&#x89E3;&#x4E3A;js=&#x300B;js&#xFF0C;Babel&#x5B58;&#x5728;&#x7684;&#x5927;&#x90E8;&#x5206;&#x539F;&#x56E0;&#x662F;&#x7531;&#x4E8E;ECMAScript&#x6807;&#x51C6;&#x8FD1;&#x51E0;&#x5E74;&#x66F4;&#x65B0;&#x7279;&#x522B;&#x5FEB;&#xFF0C;&#x4F46;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x5382;&#x5546;&#x6216;&#x8005;node&#x73AF;&#x5883;&#x5BF9;&#x6807;&#x51C6;&#x7684;&#x652F;&#x6301;&#x8DDF;&#x4E0D;&#x4E0A;&#x6807;&#x51C6;&#x66F4;&#x65B0;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x4E3A;&#x4E86;&#x8BA9;&#x5E7F;&#x5927;Jser&#x80FD;&#x591F;&#x8D76;&#x7D27;&#x4F7F;&#x7528;&#x4E0A;&#x65B0;&#x7684;&#x6807;&#x51C6;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x65B0;&#x7684;&#x6807;&#x51C6;&#x63D0;&#x6848;&#xFF0C;Babel&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x7528;&#x6237;&#x7528;&#x65B0;&#x6807;&#x51C6;&#x4E66;&#x5199;&#x7684;&#x8BED;&#x6CD5;&#x8F6C;&#x6362;&#x6210;&#x88AB;&#x5E7F;&#x5927;&#x6D4F;&#x89C8;&#x5668;&#x6240;&#x63A5;&#x53D7;&#x7684;ES5&#x8BED;&#x6CD5;&#x3002;&#x53E6;&#x5916;&#xFF0C;babel&#x7684;&#x5B58;&#x5728;&#x4E5F;&#x4F7F;&#x5F97;&#x50CF;JSX&#x8FD9;&#x79CD;&#x7279;&#x6B8A;&#x7684;js&#x8BED;&#x6CD5;&#x53EF;&#x4EE5;&#x5F97;&#x4EE5;&#x4F7F;&#x7528;&#x3002;</p><h2 id="&#x6982;&#x5FF5;&#x4ECB;&#x7ECD;">&#x6982;&#x5FF5;&#x4ECB;&#x7ECD;</h2><h3 id="babel-cli">babel-cli</h3><p>babel-cli&#x662F;babel&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x8FDB;&#x884C;js&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x8BD1;&#x3002;
-&#x901A;&#x8FC7;&#x8FD0;&#x884C; babel ./src/cli.js -o lib/cli.js &#x6211;&#x4EEC;&#x5C06;</p><pre><code class="lang-javascript"><span class="hljs-keyword">const</span> func = (item) =&gt; item + <span class="hljs-number">1</span>;
-<span class="hljs-built_in">console</span>.log(func(<span class="hljs-number">1</span>));</code></pre>
-<p>&#x8F6C;&#x6362;&#x6210;&#xFF1A;</p><pre><code class="lang-javascript"><span class="hljs-meta">&quot;use strict&quot;</span>;
+                                <h1 id="babel-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;">Babel &#x5B66;&#x4E60;&#x7B14;&#x8BB0;</h1>
+<h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
+<p>Babel&#x662F;&#x4E00;&#x4E2A;js&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;babel&#x7684;&#x4F5C;&#x7528;&#x7406;&#x89E3;&#x4E3A;js=&#x300B;js&#xFF0C;Babel&#x5B58;&#x5728;&#x7684;&#x5927;&#x90E8;&#x5206;&#x539F;&#x56E0;&#x662F;&#x7531;&#x4E8E;ECMAScript&#x6807;&#x51C6;&#x8FD1;&#x51E0;&#x5E74;&#x66F4;&#x65B0;&#x7279;&#x522B;&#x5FEB;&#xFF0C;&#x4F46;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x5382;&#x5546;&#x6216;&#x8005;node&#x73AF;&#x5883;&#x5BF9;&#x6807;&#x51C6;&#x7684;&#x652F;&#x6301;&#x8DDF;&#x4E0D;&#x4E0A;&#x6807;&#x51C6;&#x66F4;&#x65B0;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x4E3A;&#x4E86;&#x8BA9;&#x5E7F;&#x5927;Jser&#x80FD;&#x591F;&#x8D76;&#x7D27;&#x4F7F;&#x7528;&#x4E0A;&#x65B0;&#x7684;&#x6807;&#x51C6;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x65B0;&#x7684;&#x6807;&#x51C6;&#x63D0;&#x6848;&#xFF0C;Babel&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x7528;&#x6237;&#x7528;&#x65B0;&#x6807;&#x51C6;&#x4E66;&#x5199;&#x7684;&#x8BED;&#x6CD5;&#x8F6C;&#x6362;&#x6210;&#x88AB;&#x5E7F;&#x5927;&#x6D4F;&#x89C8;&#x5668;&#x6240;&#x63A5;&#x53D7;&#x7684;ES5&#x8BED;&#x6CD5;&#x3002;&#x53E6;&#x5916;&#xFF0C;babel&#x7684;&#x5B58;&#x5728;&#x4E5F;&#x4F7F;&#x5F97;&#x50CF;JSX&#x8FD9;&#x79CD;&#x7279;&#x6B8A;&#x7684;js&#x8BED;&#x6CD5;&#x53EF;&#x4EE5;&#x5F97;&#x4EE5;&#x4F7F;&#x7528;&#x3002;</p>
+<h2 id="&#x6982;&#x5FF5;&#x4ECB;&#x7ECD;">&#x6982;&#x5FF5;&#x4ECB;&#x7ECD;</h2>
+<h3 id="babel-cli">babel-cli</h3>
+<p>babel-cli&#x662F;babel&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x8FDB;&#x884C;js&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x8BD1;&#x3002;
+&#x901A;&#x8FC7;&#x8FD0;&#x884C; babel ./src/cli.js -o lib/cli.js &#x6211;&#x4EEC;&#x5C06;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> func = (item) =&gt; item + <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(func(<span class="hljs-number">1</span>));
+</code></pre>
+<p>&#x8F6C;&#x6362;&#x6210;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-meta">&quot;use strict&quot;</span>;
 
 <span class="hljs-keyword">var</span> func = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func</span>(<span class="hljs-params">item</span>) </span>{
   <span class="hljs-keyword">return</span> item + <span class="hljs-number">1</span>;
 };
 <span class="hljs-built_in">console</span>.log(func(<span class="hljs-number">1</span>));
 </code></pre>
-<h3 id="babel-register">babel-register</h3><p>babel-register&#x63D0;&#x4F9B;&#x53E6;&#x5916;&#x4E00;&#x79CD;babel&#x7F16;&#x8BD1;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x624B;&#x52A8;&#x7F16;&#x8BD1;&#xFF0C;&#x53EA;&#x8981;&#x5F15;&#x5165;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x3002;
-&#x4F8B;&#x5982;&#x5982;&#x4E0B;&#x4EE3;&#x7801; &#x76F4;&#x63A5;&#x7528;node src/index.js&#x8FD0;&#x884C;&#x5C06;&#x4F1A;&#x62A5;&#x9519;&#xFF1A;</p><pre><code class="lang-javascript"><span class="hljs-keyword">const</span> obj = {
+<h3 id="babel-node">babel-node</h3>
+<p>babel-node&#x662F;babel-cli&#x81EA;&#x5E26;&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x652F;&#x6301;ES6&#x7684;REPL&#x73AF;&#x5883;&#xFF0C;&#x5B83;&#x652F;&#x6301;Node&#x4E2D;REPL&#x7684;&#x6240;&#x6709;&#x529F;&#x80FD;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x76F4;&#x63A5;&#x8FD0;&#x884C;node&#x4EE3;&#x7801;&#x3002;
+&#x76F4;&#x63A5;&#x6267;&#x884C;js&#x6587;&#x4EF6;&#xFF1A;
+<img src="img/demo1.png" alt=""></p>
+<p>&#x76F4;&#x63A5;&#x6267;&#x884C;&#x4EE3;&#x7801;&#xFF1A;
+<img src="img/demo2.png" alt=""></p>
+<h3 id="babel-register">babel-register</h3>
+<p>babel-register&#x63D0;&#x4F9B;&#x53E6;&#x5916;&#x4E00;&#x79CD;babel&#x7F16;&#x8BD1;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x624B;&#x52A8;&#x7F16;&#x8BD1;&#xFF0C;&#x53EA;&#x8981;&#x5F15;&#x5165;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x3002;
+&#x4F8B;&#x5982;&#x5982;&#x4E0B;&#x4EE3;&#x7801; &#x76F4;&#x63A5;&#x7528;node src/index.js&#x8FD0;&#x884C;&#x5C06;&#x4F1A;&#x62A5;&#x9519;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> obj = {
   name: <span class="hljs-string">&apos;orangeyyy&apos;</span>
 };
 
@@ -197,24 +415,159 @@
   age: <span class="hljs-number">18</span>
 };
 
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${obj2.name}</span>:<span class="hljs-subst">${obj2.age}</span>`</span>);</code></pre>
-<p><img src="img/error1.png">
-&#x4F46;&#x662F;&#x5982;&#x679C;&#x65B0;&#x589E;&#x4E00;&#x4E2A;register.js&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x8FD0;&#x884C; node src/register.js &#x5219;&#x4F1A;&#x5F97;&#x5230;&#x6B63;&#x786E;&#x7ED3;&#x679C;&#x3002;</p><pre><code class="lang-javascript"><span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;babel-register&apos;</span>);
-<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./index.js&apos;</span>);</code></pre>
-<blockquote><p>babel-regiser&#x6BD4;&#x8F83;&#x9002;&#x5408;&#x8FD0;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x811A;&#x672C;&#x6216;&#x5176;&#x4ED6;&#x672C;&#x5730;&#x8FD0;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#xFF0C;&#x6700;&#x597D;&#x8FD8;&#x662F;&#x5148;&#x7F16;&#x8BD1;&#x518D;&#x4F7F;&#x7528;&#x3002;</p><p>&#x4E0A;&#x4F8B;&#x4E2D;&#x4E0D;&#x8981;&#x5C06;babel-register&#x76F4;&#x63A5;&#x653E;&#x5230;index.js&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x800C;&#x662F;&#x5E94;&#x8BE5;&#x65B0;&#x589E;&#x4E00;&#x4E2A;register&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x5728;register&#x6587;&#x4EF6;&#x4E2D;&#x5F15;&#x7528;index.js,&#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x5728;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x4E4B;&#x524D;&#x5FC5;&#x987B;&#x8981;&#x5148;&#x6CE8;&#x518C;babel&#xFF0C;&#x5982;&#x679C;&#x90FD;&#x653E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;node&#x4F1A;&#x5728;babel&#x7F16;&#x8BD1;&#x4E4B;&#x524D;&#x5C31;&#x76F4;&#x63A5;&#x6267;&#x884C;index&#x6587;&#x4EF6;&#x3002;</p><h3 id="babel-core">babel-core</h3><p>babel-core&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x901A;&#x8FC7;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;babel&#x7684;&#x65B9;&#x5F0F;&#x3002;
-&#x5F15;&#x5165;babel-core&#xFF1A;</p><pre><code class="lang-javascript"><span class="hljs-keyword">const</span> babel = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;babel-core&apos;</span>);</code></pre>
-<p>babel-core&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x6765;&#x7F16;&#x8BD1;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p><pre><code class="lang-javascript">babel.transform(<span class="hljs-string">&quot;code();&quot;</span>, options);
-<span class="hljs-comment">// =&gt; { code, map, ast }</span></code></pre>
-<p>&#x5BF9;&#x4E8E;&#x6587;&#x4EF6;&#x5939;&#xFF0C;babel-core&#x63D0;&#x4F9B;&#x540C;&#x6B65;&#x6216;&#x8005;&#x5F02;&#x6B65;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#xFF1A;
-```javascript
-babel.transformFileSync(&quot;filename.js&quot;, options);
-// =&gt; { code, map, ast }</p></blockquote><p>babel.transformFile(&quot;filename.js&quot;, options, function(err, result) {
-  result; // =&gt; { code, map, ast }
-});</p><pre><code>&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x6709;babel AST&#xFF08;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x6811;&#xFF0C;&#x5173;&#x4E8E;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x6811;&#x53EF;&#x4EE5;&#x518D;&#x5F00;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF09; &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x6765;&#x7F16;&#x8BD1;&#xFF1A;
-```javascript
-babel.transformFromAst(ast, code, options);
-// =&gt; { code, map, ast }</code></pre>
-<h3 id="babel-runtime">babel-runtime</h3><h3 id="babel-polyfill">babel-polyfill</h3><h3 id="babel-eslint">babel-eslint</h3><h3 id="babelrc">.babelrc</h3><h2 id="&#x4F7F;&#x7528;&#x6307;&#x5357;">&#x4F7F;&#x7528;&#x6307;&#x5357;</h2><h2 id="&#x5B9E;&#x6218;">&#x5B9E;&#x6218;</h2>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${obj2.name}</span>:<span class="hljs-subst">${obj2.age}</span>`</span>);
+</code></pre>
+<p><img src="img/error1.png" alt="">
+&#x4F46;&#x662F;&#x5982;&#x679C;&#x65B0;&#x589E;&#x4E00;&#x4E2A;register.js&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x8FD0;&#x884C; node src/register.js &#x5219;&#x4F1A;&#x5F97;&#x5230;&#x6B63;&#x786E;&#x7ED3;&#x679C;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;babel-register&apos;</span>);
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./index.js&apos;</span>);
+</code></pre>
+<blockquote>
+<p>babel-regiser&#x6BD4;&#x8F83;&#x9002;&#x5408;&#x8FD0;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x811A;&#x672C;&#x6216;&#x5176;&#x4ED6;&#x672C;&#x5730;&#x8FD0;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#xFF0C;&#x6700;&#x597D;&#x8FD8;&#x662F;&#x5148;&#x7F16;&#x8BD1;&#x518D;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x4E0D;&#x8981;&#x5C06;babel-register&#x76F4;&#x63A5;&#x653E;&#x5230;index.js&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x800C;&#x662F;&#x5E94;&#x8BE5;&#x65B0;&#x589E;&#x4E00;&#x4E2A;register&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x5728;register&#x6587;&#x4EF6;&#x4E2D;&#x5F15;&#x7528;index.js,&#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x5728;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x4E4B;&#x524D;&#x5FC5;&#x987B;&#x8981;&#x5148;&#x6CE8;&#x518C;babel&#xFF0C;&#x5982;&#x679C;&#x90FD;&#x653E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;node&#x4F1A;&#x5728;babel&#x7F16;&#x8BD1;&#x4E4B;&#x524D;&#x5C31;&#x76F4;&#x63A5;&#x6267;&#x884C;index&#x6587;&#x4EF6;&#x3002;</p>
+</blockquote>
+<h3 id="babel-core">babel-core</h3>
+<p>babel-core&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x901A;&#x8FC7;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;babel&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;babel-core&#x53EA;&#x662F;&#x8D1F;&#x8D23;&#x4EE3;&#x7801;&#x89E3;&#x6790;&#x53CA;AST&#x751F;&#x6210;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x8F6C;&#x7801;&#xFF0C;&#x8F6C;&#x7801;&#x7531;&#x63D2;&#x4EF6;&#x6765;&#x5B8C;&#x6210;&#x3002;
+&#x5F15;&#x5165;babel-core&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> babel = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;babel-core&apos;</span>);
+</code></pre>
+<p>babel-core&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x6765;&#x7F16;&#x8BD1;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-javascript">babel.transform(<span class="hljs-string">&quot;code();&quot;</span>, options);
+<span class="hljs-comment">// =&gt; { code, map, ast }</span>
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x6587;&#x4EF6;&#x5939;&#xFF0C;babel-core&#x63D0;&#x4F9B;&#x540C;&#x6B65;&#x6216;&#x8005;&#x5F02;&#x6B65;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-javascript">babel.transformFileSync(<span class="hljs-string">&quot;filename.js&quot;</span>, options);
+<span class="hljs-comment">// =&gt; { code, map, ast }</span>
+
+babel.transformFile(<span class="hljs-string">&quot;filename.js&quot;</span>, options, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, result</span>) </span>{
+  result; <span class="hljs-comment">// =&gt; { code, map, ast }</span>
+});
+</code></pre>
+<p>&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x6709;babel AST&#xFF08;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x6811;&#xFF0C;&#x5173;&#x4E8E;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x6811;&#x53EF;&#x4EE5;&#x518D;&#x5F00;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF09; &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x6765;&#x7F16;&#x8BD1;&#xFF1A;</p>
+<pre><code class="lang-javascript">babel.transformFromAst(ast, code, options);
+<span class="hljs-comment">// =&gt; { code, map, ast }</span>
+</code></pre>
+<h3 id="babel-runtime">babel-runtime</h3>
+<p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;EcmaScript&#x7684;&#x4E00;&#x4E9B;&#x7EC6;&#x8282;&#xFF0C;babel&#x4F1A;&#x6709;&#x4E00;&#x4E9B;helper&#x65B9;&#x6CD5;&#x4FDD;&#x8BC1;&#x4EE3;&#x7801;&#x7684;&#x6574;&#x6D01;&#xFF0C;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x5728;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5C06;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x6253;&#x5230;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x6700;&#x4E0A;&#x65B9;&#xFF0C;&#x4F7F;&#x7528;babel-runtime&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E9B;helper&#x65B9;&#x6CD5;&#x7EDF;&#x4E00;&#x79FB;&#x5230;runtime&#x4E2D;&#xFF0C;&#x5728;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5C06;babel-runtime&#x5F15;&#x5165;&#x7F16;&#x8BD1;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x628A;helper&#x65B9;&#x6CD5;&#x6253;&#x5230;&#x6587;&#x4EF6;&#x4E0A;&#x3002;
+&#x5BF9;&#x4E8E;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Obj</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name) {
+    <span class="hljs-keyword">this</span>.name = name;
+  }
+  getName() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;
+  }
+}
+</code></pre>
+<p>&#x672A;&#x4F7F;&#x7528;babel-runtime&#x65F6;,&#x7F16;&#x8BD1;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-meta">&quot;use strict&quot;</span>;
+
+<span class="hljs-keyword">var</span> _createClass = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">defineProperties</span>(<span class="hljs-params">target, props</span>) </span>{ <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; props.length; i++) { <span class="hljs-keyword">var</span> descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || <span class="hljs-literal">false</span>; descriptor.configurable = <span class="hljs-literal">true</span>; <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;value&quot;</span> <span class="hljs-keyword">in</span> descriptor) descriptor.writable = <span class="hljs-literal">true</span>; <span class="hljs-built_in">Object</span>.defineProperty(target, descriptor.key, descriptor); } } <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">Constructor, protoProps, staticProps</span>) </span>{ <span class="hljs-keyword">if</span> (protoProps) defineProperties(Constructor.prototype, protoProps); <span class="hljs-keyword">if</span> (staticProps) defineProperties(Constructor, staticProps); <span class="hljs-keyword">return</span> Constructor; }; }();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_classCallCheck</span>(<span class="hljs-params">instance, Constructor</span>) </span>{ <span class="hljs-keyword">if</span> (!(instance <span class="hljs-keyword">instanceof</span> Constructor)) { <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">&quot;Cannot call a class as a function&quot;</span>); } }
+
+<span class="hljs-keyword">var</span> Obj = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Obj</span>(<span class="hljs-params">name</span>) </span>{
+    _classCallCheck(<span class="hljs-keyword">this</span>, Obj);
+
+    <span class="hljs-keyword">this</span>.name = name;
+  }
+
+  _createClass(Obj, [{
+    key: <span class="hljs-string">&quot;getName&quot;</span>,
+    value: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getName</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;
+    }
+  }]);
+
+  <span class="hljs-keyword">return</span> Obj;
+}();
+</code></pre>
+<p>&#x5982;&#x679C;&#x5728;.babelrc&#x4E2D;&#x6309;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;babel-runtime:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;presets&quot;</span>: [<span class="hljs-string">&quot;es2015&quot;</span>, <span class="hljs-string">&quot;stage-0&quot;</span>],
+  <span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;transform-runtime&quot;</span>]
+}
+</code></pre>
+<p>&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x4E3A;:</p>
+<pre><code class="lang-javascript"><span class="hljs-meta">&quot;use strict&quot;</span>;
+
+<span class="hljs-keyword">var</span> _classCallCheck2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;babel-runtime/helpers/classCallCheck&quot;</span>);
+
+<span class="hljs-keyword">var</span> _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+<span class="hljs-keyword">var</span> _createClass2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;babel-runtime/helpers/createClass&quot;</span>);
+
+<span class="hljs-keyword">var</span> _createClass3 = _interopRequireDefault(_createClass2);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_interopRequireDefault</span>(<span class="hljs-params">obj</span>) </span>{ <span class="hljs-keyword">return</span> obj &amp;&amp; obj.__esModule ? obj : { <span class="hljs-keyword">default</span>: obj }; }
+
+<span class="hljs-keyword">var</span> Obj = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Obj</span>(<span class="hljs-params">name</span>) </span>{
+    (<span class="hljs-number">0</span>, _classCallCheck3.default)(<span class="hljs-keyword">this</span>, Obj);
+
+    <span class="hljs-keyword">this</span>.name = name;
+  }
+
+  (<span class="hljs-number">0</span>, _createClass3.default)(Obj, [{
+    key: <span class="hljs-string">&quot;getName&quot;</span>,
+    value: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getName</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;
+    }
+  }]);
+  <span class="hljs-keyword">return</span> Obj;
+}();
+</code></pre>
+<blockquote>
+<p>babel-runtime &#x8981;&#x7528;--save&#x5B89;&#x88C5;&#x800C;&#x4E0D;&#x662F;--save-dev&#x3002;</p>
+</blockquote>
+<h3 id="babel-polyfill">babel-polyfill</h3>
+<p>babel&#x4F1A;&#x7F16;&#x8BD1;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x65B0;&#x7684;EcmaScript&#x8BED;&#x6CD5;&#xFF0C;&#x5BF9;&#x4E8E;&#x65B0;&#x7684;API&#x63A5;&#x53E3;&#x5219;&#x4E0D;&#x4F1A;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;Array.from&#x3001;Object.asign&#x3001;String.startsWith&#x7B49;&#x7B49;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;&#x65B0;&#x7684;API&#x5C31;&#x8981;&#x4F7F;&#x7528;&#x5230;babel-polyfill&#x4E86;&#x3002;&#x4F7F;&#x7528;babel-polyfill&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5B89;&#x88C5;babel-polyfill&#x5E76;&#x5728;&#x4EE3;&#x7801;&#x7684;&#x6700;&#x4E0A;&#x5C42;&#x5F15;&#x5165;babel-polyfill&#x3002;</p>
+<h3 id="babel-eslint">babel-eslint</h3>
+<p>eslint&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4EE3;&#x7801;&#x8BED;&#x6CD5;&#x548C;&#x98CE;&#x683C;&#x7684;&#x68C0;&#x67E5;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x7C7B;&#x5DE5;&#x5177;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5148;&#x5BF9;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x524D;&#x7F6E;&#x8F6C;&#x7801;&#x5728;&#x8FDB;&#x884C;&#x68C0;&#x67E5;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x9700;&#x8981;&#x7528;&#x5230;babel-eslint&#x3002;babel-eslint&#x7684;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x662F;&#x5728;.eslintrc&#x4E2D;&#x7684;parser&#x4E2D;&#x914D;&#x7F6E;eslint-babel&#x3002;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;parser&quot;</span>: <span class="hljs-string">&quot;babel-eslint&quot;</span>,
+  <span class="hljs-string">&quot;rules&quot;</span>: {
+    <span class="hljs-string">&quot;quotes&quot;</span>: [<span class="hljs-number">2</span>, <span class="hljs-string">&quot;single&quot;</span>],
+    <span class="hljs-string">&quot;no-undef&quot;</span>: [<span class="hljs-number">2</span>],
+    <span class="hljs-string">&quot;no-unused-vars&quot;</span>: [<span class="hljs-number">2</span>, { <span class="hljs-string">&quot;vars&quot;</span>: <span class="hljs-string">&quot;local&quot;</span> }]
+  }
+}
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x8FD0;&#x884C;eslint src/eslint.js,</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> testStr = <span class="hljs-string">&quot;hello world&quot;</span>;
+<span class="hljs-keyword">const</span> func = (str) =&gt; str + <span class="hljs-string">&apos;!&apos;</span>;
+</code></pre>
+<p>&#x4F1A;&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x7ED3;&#x679C;&#xFF0C;&#x5F88;&#x660E;&#x663E;eslint&#x4E0D;&#x8BA4;&#x8BC6;const&#xFF0C;
+<img src="img/error2.png" alt=""></p>
+<p>&#x4F46;&#x662F;&#x5982;&#x679C;&#x5C06;.eslintrc&#x4E2D;&#x7684;parser&#x53BB;&#x6389;&#xFF0C;&#x5C06;&#x5F97;&#x5230;&#x4EE5;&#x4E0B;&#x7ED3;&#x679C;&#xFF1A;
+<img src="img/error3.png" alt=""></p>
+<blockquote>
+<p>babel-eslint&#x4E3B;&#x8981;&#x662F;&#x9488;&#x5BF9;&#x4E00;&#x4E9B;eslint&#x8FD8;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x7C7B;&#x578B;&#x53CA;&#x5B9E;&#x9A8C;&#x6027;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E9B;eslint&#x8FD8;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x7279;&#x6027;&#xFF0C;babel-eslint&#x4F1A;&#x5C06;&#x4ED6;&#x4EEC;&#x8F6C;&#x6362;&#x6210;eslint&#x8BA4;&#x8BC6;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x5426;&#x5219;&#x63A8;&#x8350;&#x662F;&#x7528;eslint&#x9ED8;&#x8BA4;&#x7684;parser&#x3002;</p>
+</blockquote>
+<h3 id="babelrc">.babelrc</h3>
+<p>babel&#x672C;&#x8EAB;&#x662F;&#x4E0D;&#x4F1A;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;preset&#x548C;plugin&#x544A;&#x8BC9;babel&#x8BE5;&#x5982;&#x4F55;&#x7F16;&#x8BD1;&#x4EE3;&#x7801;&#xFF0C;&#x800C;&#x914D;&#x7F6E;preset&#x548C;plugin&#x6700;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x901A;&#x8FC7;.babelrc&#x3002;&#x4E00;&#x822C;.babelrc&#x7684;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;presets&quot;</span>: [<span class="hljs-string">&quot;es2015&quot;</span>, <span class="hljs-string">&quot;stage-0&quot;</span>],
+  <span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;transform-runtime&quot;</span>]
+}
+</code></pre>
+<p>&#x5176;&#x5B9E;preset&#x5C31;&#x662F;&#x4E00;&#x4E2A;preset&#x52A0;plugin&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x7406;&#x89E3;&#x5C31;&#x662F;preset&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4EFD;.babelrc&#x914D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://github.com/orangeyyy/babel-preset-orangeyyy" target="_blank">babel-preset-orangeyyy</a>,&#x8FD9;&#x662F;&#x6211;&#x81EA;&#x5DF1;&#x5199;&#x7684;&#x4E00;&#x4E2A;preset&#x4F8B;&#x5B50;&#x3002;&#x5728;.babelrc&#x4E2D;&#x7F16;&#x8BD1;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>plugin&#x4F18;&#x5148;&#x4E8E;preset&#xFF1B;</li>
+<li>plugin&#x4E2D;&#x6309;&#x7167;&#x6570;&#x7EC4;&#x987A;&#x5E8F;&#x6267;&#x884C;&#xFF1B;</li>
+<li>preset&#x4E2D;&#x6309;&#x7167;&#x6570;&#x7EC4;&#x5012;&#x5E8F;&#x6267;&#x884C;&#xFF1B;</li>
+</ul>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>babel&#x7684;&#x6574;&#x4F53;&#x4FE1;&#x606F;&#x6D41;&#x7A0B;&#x4E3A;:&#x4EE3;&#x7801;&#x89E3;&#x6790;=&#x300B;AST&#x751F;&#x6210;=&#x300B;&#x8F6C;&#x7801;=&#x300B;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x3002;&#x5176;&#x4E2D;&#x8F6C;&#x7801;&#x8FC7;&#x7A0B;&#x7531;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x63D2;&#x4EF6;&#x5B8C;&#x6210;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x843D;&#x540E;&#x4E8E;&#x89C4;&#x8303;&#x5236;&#x5B9A;&#x7684;&#x65F6;&#x4EE3;&#xFF0C;babel&#x7ED9;&#x5E7F;&#x5927;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;&#x4E86;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6700;&#x65B0;&#x89C4;&#x8303;&#x7684;&#x673A;&#x4F1A;&#xFF0C;&#x4E5F;&#x5E2E;&#x52A9;&#x5927;&#x5BB6;&#x63D0;&#x5347;&#x4E86;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x3002;</p>
+<h2 id="&#x53C2;&#x8003;&#x6587;&#x6863;">&#x53C2;&#x8003;&#x6587;&#x6863;</h2>
+<ul>
+<li><a href="http://babeljs.io/" target="_blank">Babel&#x5B98;&#x65B9;&#x6587;&#x6863;</a></li>
+<li><a href="https://github.com/thejameskyle/babel-handbook/blob/master/translations/zh-Hans/user-handbook.md#toc-babel-runtime" target="_blank">Babel &#x7528;&#x6237;&#x624B;&#x518C;</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/01/babel.html" target="_blank">Babel &#x5165;&#x95E8;&#x6559;&#x7A0B;</a></li>
+</ul>
+<p>PS&#xFF1A;&#x6587;&#x7AE0;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x4F8B;&#x5B50;&#x53EF;&#x4EE5;&#x67E5;&#x770B;<a href="https://github.com/orangeyyy/babel-demo" target="_blank">babel-demo</a>&#x3002;</p>
+
                                 
                                 </section>
                             
@@ -241,10 +594,14 @@ babel.transformFromAst(ast, code, options);
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Babel">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Babel">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="babel-plugin.html" class="navigation navigation-next " aria-label="Next page: Babel Plugin">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -253,7 +610,7 @@ babel.transformFromAst(ast, code, options);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"学习笔记","level":"1.2.1","depth":2,"previous":{"title":"Babel","level":"1.2","depth":1,"path":"babel/README.md","ref":"./babel/README.md","articles":[{"title":"学习笔记","level":"1.2.1","depth":2,"path":"babel/note.md","ref":"./babel/note.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"babel/note.md","mtime":"2017-07-29T14:35:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2017-07-29T06:15:13.786Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"学习笔记","level":"1.2.1","depth":2,"next":{"title":"Babel Plugin","level":"1.2.2","depth":2,"path":"babel/babel-plugin.md","ref":"./babel/babel-plugin.md","articles":[]},"previous":{"title":"Babel","level":"1.2","depth":1,"path":"babel/README.md","ref":"./babel/README.md","articles":[{"title":"学习笔记","level":"1.2.1","depth":2,"path":"babel/note.md","ref":"./babel/note.md","articles":[]},{"title":"Babel Plugin","level":"1.2.2","depth":2,"path":"babel/babel-plugin.md","ref":"./babel/babel-plugin.md","articles":[]},{"title":"AST","level":"1.2.3","depth":2,"path":"babel/ast.md","ref":"./babel/ast.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"babel/note.md","mtime":"2017-11-25T13:08:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-26T12:52:53.382Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

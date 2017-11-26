@@ -13,3 +13,11 @@
   * [hilo](./tools/hilo.md)
   * [anyproxy](./tools/anyproxy.md)
   * [clipboard](./tools/clipboard.md)
+
+* [技术文章](./tech/README.md)
+  * [SS & SSR](./tech/ss.md)
+  * [PAC](./tech/pac.md)
+
+* [其他](./other/README.md)
+  * [科学上网](./other/scienceSurface.md)
+  * [Gist](./other/gist.md)
