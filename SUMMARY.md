@@ -20,4 +20,5 @@
 
 * [其他](./other/README.md)
   * [科学上网](./other/scienceSurface.md)
+  * [搭建MySQL服务](./other/mysql.md)
   * [Gist](./other/gist.md)

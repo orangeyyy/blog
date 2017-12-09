@@ -316,7 +316,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../other/gist.html">
+        <li class="chapter " data-level="1.5.2" data-path="../other/mysql.html">
+            
+                <a href="../other/mysql.html">
+            
+                    
+                    搭建MySQL服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../other/gist.html">
             
                 <a href="../other/gist.html">
             
@@ -379,7 +392,105 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="pac">PAC</h1>
+<h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
+<p>PAC&#xFF08;Proxy auto-config&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x7F51;&#x9875;&#x6D4F;&#x89C8;&#x5668;&#x6280;&#x672F;&#xFF0C;&#x7528;&#x4E8E;&#x5B9A;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x8BE5;&#x5982;&#x4F55;&#x81EA;&#x52A8;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x6765;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x7F51;&#x5740;&#x3002;&#x4E00;&#x4E2A;PAC&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x542B;&#x6709;<code>FindProxyForURL(url, host)</code>&#x51FD;&#x6570;&#x7684;js&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x8BBF;&#x95EE;&#x89C4;&#x5219;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x5728;&#x8BBF;&#x95EE;&#x5176;&#x4ED6;&#x9875;&#x9762;&#x4E4B;&#x524D;&#x4F1A;&#x5148;&#x8BBF;&#x95EE;PAC&#x6587;&#x4EF6;&#xFF0C;PAC&#x6587;&#x4EF6;&#x4E2D;URL&#x53EF;&#x80FD;&#x662F;&#x624B;&#x5DE5;&#x914D;&#x7F6E;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x901A;&#x8FC7;&#x7F51;&#x9875;&#x7684;<strong>&#x7F51;&#x7EDC;&#x4EE3;&#x7406;&#x81EA;&#x52A8;&#x53D1;&#x73B0;&#x534F;&#x8BAE;(WPAD)</strong>&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#x7684;&#x3002;</p>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x4EE3;&#x7406;&#x7684;&#x5E38;&#x7528;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x624B;&#x52A8;&#x4EE3;&#x7406;&#x914D;&#x7F6E;&#xFF1B;</li>
+<li>&#x4EE3;&#x7406;&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#xFF08;PAC&#xFF09;;</li>
+<li>&#x7F51;&#x7EDC;&#x4EE3;&#x7406;&#x81EA;&#x52A8;&#x53D1;&#x73B0;&#x534F;&#x8BAE;&#xFF08;WPAD&#xFF09;&#xFF1B;</li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;&#x65B9;&#x5F0F;">&#x4F7F;&#x7528;&#x65B9;&#x5F0F;</h2>
+<h3 id="&#x4EE3;&#x7406;&#x8BBE;&#x7F6E;">&#x4EE3;&#x7406;&#x8BBE;&#x7F6E;</h3>
+<p>&#x4F7F;&#x7528;PAC&#xFF0C;&#x9700;&#x8981;&#x5728;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x53D1;&#x5E03;&#x4E00;&#x4E2A;PAC&#x6587;&#x4EF6;&#xFF08;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x642D;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x4EE3;&#x7406;&#x914D;&#x7F6E;&#x91CC;&#x9762;&#x8F93;&#x5165;PAC&#x6587;&#x4EF6;&#x7684;URL&#x6216;&#x8005;&#x901A;&#x8FC7;WPAD&#x534F;&#x8BAE;&#x544A;&#x8BC9;&#x7528;&#x6237;&#x4EE3;&#x7406;&#x53BB;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x4E0B;&#x56FE;&#x4E3A;MAC&#x4E0B;&#x7684;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;
+<img src="img/pac1.png" alt=""></p>
+<h3 id="findproxyforurl">FindProxyForURL</h3>
+<p>PAC&#x6587;&#x4EF6;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5C31;&#x662F;<code>FindProxyForURL(url, host)</code>&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4E2D;url&#x4E3A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;URL&#xFF0C;host&#x4E3A;&#x8FD9;&#x4E2A;URL&#x6D3E;&#x751F;&#x7684;&#x4E3B;&#x673A;&#x540D;&#xFF0C;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6817;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">FindProxyForURL</span>(<span class="hljs-params">url, host</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;PROXY proxy.example.com:8080; DIRECT&apos;</span>;
+}
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x544A;&#x8BC9;&#x6D4F;&#x89C8;&#x5668;&#x901A;&#x8FC7;&#x670D;&#x52A1;&#x5668;proxy.example.com&#x7684;8080&#x7AEF;&#x53E3;&#x6765;&#x83B7;&#x53D6;&#x6240;&#x4EE5;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x6CA1;&#x6709;&#x53CD;&#x5E94;&#xFF0C;&#x90A3;&#x4E48;&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x76F4;&#x63A5;&#x8BF7;&#x6C42;&#x76EE;&#x6807;&#x9875;&#x9762;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x901A;&#x8FC7;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x3002;</p>
+<h2 id="pac&#x8BED;&#x6CD5;&#x51FD;&#x6570;">PAC&#x8BED;&#x6CD5;&amp;&#x51FD;&#x6570;</h2>
+<h3 id="&#x6307;&#x4EE4;">&#x6307;&#x4EE4;</h3>
+<p>PAC&#x7684;FindProxyForURL&#x51FD;&#x6570;&#x7684;return&#x4E3B;&#x8981;&#x5305;&#x542B;&#x4EE5;&#x4E0B;3&#x79CD;&#x6307;&#x4EE4;&#xFF1A;</p>
+<ul>
+<li>DIRECT&#xFF1A; &#x8868;&#x793A;&#x65E0;&#x4EE3;&#x7406;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#xFF1B;</li>
+<li>PROXY host:port&#xFF1A;&#x8868;&#x793A;&#x8D70;host:port&#x7684;proxy&#x670D;&#x52A1;&#xFF1B;</li>
+<li>SOCKS host:port&#xFF1A;&#x8868;&#x793A;&#x8D70;host:port&#x7684;socket&#x670D;&#x52A1;&#xFF1B;</li>
+</ul>
+<h3 id="&#x51FD;&#x6570;">&#x51FD;&#x6570;</h3>
+<h4 id="dnsdomainis">dnsDomainIs</h4>
+<p>&#x5224;&#x65AD;&#x57DF;&#x540D;&#x662F;&#x5426;&#x5728;&#x7B49;&#x4E8E;&#x7ED9;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (dnsDomainIs(host, <span class="hljs-string">&apos;google.com&apos;</span>) || dnsDomainIs(host, <span class="hljs-string">&apos;www.google.com&apos;</span>)) {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;DIRECT&apos;</span>;
+}
+</code></pre>
+<h4 id="shexpmatch">shExpMatch</h4>
+<p>shell&#x6B63;&#x5219;&#x5339;&#x914D;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (shExpMatch(url, <span class="hljs-string">&apos;http://www.google.com/folder/*&apos;</span>)) {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;DIRECT&apos;</span>;
+}
+</code></pre>
+<h4 id="dnsresolve">dnsResolve</h4>
+<p>&#x901A;&#x8FC7;DNS&#x67E5;&#x8BE2;&#x4E3B;&#x673A;IP,&#x901A;&#x5E38;&#x548C;isInNet&#x914D;&#x5408;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (isInNet(dnsResolve(host), <span class="hljs-string">&apos;10.0.0.0&apos;</span>, <span class="hljs-string">&apos;255.0.0.0&apos;</span>)) {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;DIRECT&apos;</span>;
+}
+</code></pre>
+<h4 id="isinnet">isInNet</h4>
+<p>&#x5224;&#x65AD;&#x662F;&#x5426;&#x5728;&#x7F51;&#x6BB5;&#x5185;&#xFF0C;&#x6BD4;&#x5982;10.1.0.0&#x8FD9;&#x4E2A;&#x7F51;&#x6BB5;&#xFF0C;10.1.1.0&#x5C31;&#x5728;&#x5176;&#x4E2D;&#xFF0C;&#x5982;&#x4E0A;&#x9762;&#x90A3;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;</p>
+<h4 id="myipaddress">myIpAddress</h4>
+<p>&#x8FD4;&#x56DE;&#x4E3B;&#x673A;&#x7684;IP&#x3002;</p>
+<h4 id="isplainhostname">isPlainHostName</h4>
+<p>&#x5224;&#x65AD;&#x4E3B;&#x673A;&#x540D;&#x662F;&#x5426;&#x5305;&#x542B;&#x57DF;&#x540D;&#xFF0C;&#x82E5;&#x4E0D;&#x5305;&#x542B;&#x8FD4;&#x56DE;true&#xFF1B;</p>
+<pre><code class="lang-javascript">isPlainHostName(<span class="hljs-string">&apos;www&apos;</span>) <span class="hljs-comment">//&#x8FD4;&#x56DE;true&#xFF1B;</span>
+isPlainHostName(<span class="hljs-string">&apos;www.google.com&apos;</span>) <span class="hljs-comment">//&#x8FD4;&#x56DE;false&#xFF1B;</span>
+</code></pre>
+<h4 id="isresolvable">isResolvable</h4>
+<p>&#x5224;&#x65AD;&#x4E3B;&#x673A;&#x662F;&#x5426;&#x53EF;&#x8BBF;&#x95EE;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (isResolvable(host)) {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;PROXY proxy.example.com:8080&apos;</span>;
+}
+</code></pre>
+<h4 id="dnsdomainlevels">dnsDomainLevels</h4>
+<p>&#x8FD4;&#x56DE;&#x662F;&#x51E0;&#x7EA7;&#x57DF;&#x540D;&#xFF0C;&#x6BD4;&#x5982;dnsDomainLevels(<a href="http://barretlee.com" target="_blank">http://barretlee.com</a>) &#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F; 1&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (dnsDomainLevels(host) &gt; <span class="hljs-number">0</span>) {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;PROXY proxy.example.com:8080&apos;</span>;
+}
+</code></pre>
+<h4 id="weexdayrange">weexdayRange</h4>
+<p>&#x661F;&#x671F;&#x5224;&#x65AD;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (weexdayRange(<span class="hljs-string">&apos;MON&apos;</span>, <span class="hljs-string">&apos;FRI&apos;</span>)) {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;PROXY proxy.example.com:8080&apos;</span>;
+}
+</code></pre>
+<h4 id="daterange">dateRange</h4>
+<p>&#x65E5;&#x671F;&#x5224;&#x65AD;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (dateRange(<span class="hljs-string">&apos;JAN&apos;</span>, <span class="hljs-string">&apos;MAR&apos;</span>)) {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;DIRECT&apos;</span>;
+}
+</code></pre>
+<h4 id="timerange">timeRange</h4>
+<p>&#x65F6;&#x95F4;&#x5224;&#x65AD;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (timeRange(<span class="hljs-number">8</span>, <span class="hljs-number">18</span>)) {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;DIRECT&apos;</span>;
+}
+</code></pre>
+<h4 id="alert">alert</h4>
+<p>&#x636E;&#x8BF4;&#x53EF;&#x4EE5;&#x8C03;&#x8BD5;&#x3002;</p>
+<pre><code class="lang-javascript">alert(host);
+</code></pre>
+<h2 id="wpad">WPAD</h2>
+<p>WPAD&#xFF08;Web Proxy Auto-Discovery protocol&#xFF09;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x52A8;&#x53D1;&#x73B0;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4F7F;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5BF9;&#x7528;&#x6237;&#x900F;&#x660E;&#xFF0C;WPAD&#x53EF;&#x4EE5;&#x501F;&#x52A9;DNS&#x670D;&#x52A1;&#x5668;&#x6216;&#x8005;DHCP&#x670D;&#x52A1;&#x5668;&#x6765;&#x67E5;&#x8BE2;PAC&#x6587;&#x4EF6;&#x3002;</p>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE" target="_blank">https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/22166179" target="_blank">https://zhuanlan.zhihu.com/p/22166179</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/1309_quwei_wpad/" target="_blank">https://www.ibm.com/developerworks/cn/linux/1309_quwei_wpad/</a></li>
+</ul>
+
                                 
                                 </section>
                             
@@ -422,7 +533,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PAC","level":"1.4.2","depth":2,"next":{"title":"其他","level":"1.5","depth":1,"path":"other/README.md","ref":"./other/README.md","articles":[{"title":"科学上网","level":"1.5.1","depth":2,"path":"other/scienceSurface.md","ref":"./other/scienceSurface.md","articles":[]},{"title":"Gist","level":"1.5.2","depth":2,"path":"other/gist.md","ref":"./other/gist.md","articles":[]}]},"previous":{"title":"SS & SSR","level":"1.4.1","depth":2,"path":"tech/ss.md","ref":"./tech/ss.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tech/pac.md","mtime":"2017-11-26T12:21:27.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-26T12:52:53.382Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PAC","level":"1.4.2","depth":2,"next":{"title":"其他","level":"1.5","depth":1,"path":"other/README.md","ref":"./other/README.md","articles":[{"title":"科学上网","level":"1.5.1","depth":2,"path":"other/scienceSurface.md","ref":"./other/scienceSurface.md","articles":[]},{"title":"搭建MySQL服务","level":"1.5.2","depth":2,"path":"other/mysql.md","ref":"./other/mysql.md","articles":[]},{"title":"Gist","level":"1.5.3","depth":2,"path":"other/gist.md","ref":"./other/gist.md","articles":[]}]},"previous":{"title":"SS & SSR","level":"1.4.1","depth":2,"path":"tech/ss.md","ref":"./tech/ss.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tech/pac.md","mtime":"2017-12-09T07:54:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-09T13:54:46.762Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -430,10 +541,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
